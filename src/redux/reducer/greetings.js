@@ -12,8 +12,6 @@ const fetchGreetingFromApi = () => (dispatch) => {
   axios.get(API_URL).then((response) => {
     const greeting = response.data;
     dispatch(getGreeting(greeting));
-  }).catch((e) => {
-    console.log(e);
   });
 };
 
